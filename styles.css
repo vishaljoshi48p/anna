@@ -1,0 +1,81 @@
+/* styles.css */
+body {
+    font-family: 'Courier New', monospace; /* Coding font */
+    background: #0f0f0f; /* Dark background */
+    color: #d4d4d4; /* Light text color for contrast */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background: #1e1e1e; /* Darker container background */
+    border-radius: 10px; /* Slightly smaller border radius */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Enhanced shadow */
+    padding: 20px; /* Reduced padding for a smaller box */
+    max-width: 600px; /* Smaller maximum width */
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.2) 50%);
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.container .content {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color: #e0e0e0; /* Soft white color */
+    font-size: 2.5rem; /* Slightly smaller font size */
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Smaller text shadow */
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    background: linear-gradient(45deg, #6a1b9a, #ab47bc); /* Gradient text effect */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+img {
+    border-radius: 10px; /* Matching border radius */
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border: 3px solid #444; /* Thinner border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Shadow for the image */
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Geometric background shapes */
+.pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.2) 0%, transparent 70%),
+                repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0px, rgba(255, 255, 255, 0.1) 20px, rgba(0, 0, 0, 0.1) 20px, rgba(0, 0, 0, 0.1) 40px);
+    z-index: 0;
+    opacity: 0.2;
+    mix-blend-mode: overlay;
+}
